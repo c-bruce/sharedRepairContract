@@ -46,7 +46,7 @@ contract SharedRepair {
     }
 
     function deposit() public payable {
-        for (uint i=1; i < peopleCount; i++) {
+        for (uint i=0; i <= peopleCount; i++) {
             if (msg.sender == people[i]._address) {
                 people[i]._contribution += msg.value / 1e18;
                 if (people[i]._contribution >= shareOfRepairCost) {
